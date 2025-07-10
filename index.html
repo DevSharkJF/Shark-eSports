@@ -14,38 +14,36 @@
         <header>
             <img src="./assets/logo.png" alt="Logo da Imagem">
         </header>
+        <main>
+            <section>
+                <div>
+                    <center>
+                        <h2>ASSISTENTE DE JOGOS</h2>
+                        <p>
+                            Use a assistente virtual do Gemini para conseguir boas estratégias, dicas e builds
+                            dos seus jogos favoritos. 
+                        </p>
+                    </center>
 
-        <!-- <center> -->
-            <main>
-                <section>
-                    <div>
-                        <center>
-                            <h2>ASSISTENTE DE JOGOS</h2>
-                            <p>
-                                Use a assistente virtual do Gemini para conseguir boas estratégias, dicas e builds
-                                dos seus jogos favoritos. 
-                            </p>
-                        </center>
-
-                        <form>
-                            <input type="password" id="apiKey" style="width: 43%;"placeholder="Digite a API KEY do Gemini">
-                            <select name="" id="" style="width: 43%;">
-                                <center>
-                                    <option value="" disabled selected>Selecione um Jogo</option>
-                                    <option value="gta">GTA</option>
-                                    <option value="csgo">CS:GO</option>
-                                    <option value="ow2">Overwatch 2</option>
-                                </center>
-                            </select>
-                            <input type="text" placeholder="Faça sua Busca" style="width: 100%;">
-                            <!-- <textarea name="" id="" placeholder="Builds, Dicas e Estratégias"></textarea> -->
-                            <button>PERGUNTAR</button>
-                        </form>
-                    </div>
-                </section>
-            </main>
-        <!-- </center> -->
-        
-        <!-- <script src="/assets/script.js"></script> -->
+                    <form id="form">
+                        <input type="password" id="apiKey" style="width: 50%;"placeholder="Digite a API KEY do Gemini">
+                        <select name="" id="gameSelect" style="width: 37%;">
+                            <option value="" disabled selected>Selecione um Jogo</option>
+                            <option value="gta">GTA</option>
+                            <option value="csgo">CS:GO</option>
+                            <option value="ow2">Overwatch 2</option>
+                        </select>
+                        <input type="text" id="questionInput" placeholder="Faça sua Busca" style="width: 100%;">
+                        <!-- <textarea name="" id="" placeholder="Builds, Dicas e Estratégias"></textarea> -->
+                        <button id="askButton">PERGUNTAR</button>
+                        <div id="aiResponse" hidden>
+                            <div class="response-content"></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+        <script src="./assets/script.js"></script>
     </body>
 </html>
