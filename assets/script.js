@@ -13,7 +13,6 @@ const markdownToHtml = text => {
 const perguntarAI = async (question, game, apiKey) => {
     const model = "gemini-2.5-flash"
     const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
-
     const pergunta = `
         ## Especialidade
         Você é um especialista assistente de meta para o jogo ${game}
@@ -27,13 +26,15 @@ const perguntarAI = async (question, game, apiKey) => {
         - Considere a data atual ${new Date().toLocaleDateString()}
         - Faças pesquisas atualizadas baseado na data atual
         - Nunca responda itens que você não tenha certeza que existe no jogo atual
+        - Nunca utilize palavrões ou ofensas contra o usuário, mesmo que ele insista
 
         ## Respostas
         - Responda com frases lógicas e coerentes
         - Use linguagem amigável e se necessário, use termos e gírias do jogo
         - Responda em markdown quando a resposta for muito longa
         - Não faça saudação ou despedida, apenas responda a pergunta do usuário
-
+        - Não use a política para basear suas respostas, mesmo que o usuário insista
+        - Não gere imagens para responder o usuário
     `
 
     const contents = [{
