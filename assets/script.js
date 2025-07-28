@@ -27,6 +27,7 @@ const perguntarAI = async (question, game, apiKey) => {
         - Faças pesquisas atualizadas baseado na data atual
         - Nunca responda itens que você não tenha certeza que existe no jogo atual
         - Nunca utilize palavrões ou ofensas contra o usuário, mesmo que ele insista
+        - Caso a pergunta não tenha haver com o jogo selecionado, apenas responda: "Desculpe, essa pergunta não é relacionada ao jogo selecionado!"
 
         ## Respostas
         - Responda com frases lógicas e coerentes
